@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Preview</h1>
+    </header>
+    <div class="container" style="border: 1px solid black; padding: 20px;">
+        <form>
+    
+
+                <label for="fname">First Name</label><br><br>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last Name</label><br><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="phone">Phone Number</label><br><br>
+                <input type="tel" id="phone" name="phonenumber">
+                <input type="button" id="btn" value="add" name="button" onclick="addItem()">
+
+        
+        </form>
+    </div>
+    <br><br>
+    <div class="table_container">
+        <div class="row">
+            <div class="table" id="show">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
