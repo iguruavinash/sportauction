@@ -1,0 +1,11 @@
+.container{
+    padding: 40px;
+    max-width: max-content;
+}
+h1{
+    color: tomato;
+}
+button{
+    margin:auto;
+    display:block;
+}

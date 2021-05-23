@@ -1,0 +1,92 @@
+<!--
+    {
+    "pid": 101,
+"product_name": "Realme Narzo 20A (Glory Silver, 64 GB)  (4 GB RAM)",
+"price": 9499,
+"product_image":"https://rukminim1.flixcart.com/image/416/416/kfbfr0w0/mobile/y/f/s/realme-narzo-20a-rmx2050-original-imafvswuehda4esc.jpeg?q=70",
+"offers":[
+    {
+        "Offer_name":"Flipkart Axis Bank Credit Card",
+        "offer_description":"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit Card"
+    },
+    {
+        "Offer_name":"GST",
+        "offer_description":"GST Invoice is available for this Product"
+    }
+
+],
+"product_specifications": [
+     "4 GB RAM | 64 GB ROM | Expandable Upto 256 GB",
+     "16.51 cm (6.5 inch) HD+ Display",
+     "12MP + 2MP + 2MP | 8MP Front Camera",
+     "5000 mAh Lithium-ion Battery",
+     "Qualcomm Snapdragon 665 Processor"
+],
+"category":"Electronics",
+"sub_category":"Mobiles",
+"seller":"GRAHGOODS RETAIL",
+"reviews":[]
+}
+-->
+
+<div class="container">
+  <form id="form" #form="ngForm" (ngSubmit)="addProduct(form)">
+    <div class="form-group">
+      <input placeholder="enter pid" type="text" ngModel name="pid" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter product_name" type="text" ngModel name="product_name" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter price" type="text" ngModel name="price" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter product image" type="text" ngModel name="product_image" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter category" type="text" ngModel name="category" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter sub category" type="text" ngModel name="sub_category" size="80"> <br><br>
+    </div>
+    <div class="form-group">
+      <input placeholder="enter seller" type="text" ngModel name="seller" size="80"> <br><br>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+    <!-- <button class="btn btn-primary">Update</button> -->
+  </form>
+</div>
+
+<hr>
+
+<!--Table-->
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Sub-category</th>
+        <th>Seller</th>
+        <th>Image</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of allProducts">
+        <td>{{product.product_name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.sub_category}}</td>
+        <td>{{product.seller}}</td>
+        <td>{{product.product_image}}</td>
+        <td><button class="btn btn-danger" (click)="deleteProduct(product._id)">Delete</button></td>
+        <td><button class="btn btn-danger" (click)="editProduct(product._id)">Edit</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
