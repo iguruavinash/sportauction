@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>AP Covid 19 District-wise Data</h1>
+  <table class="center">
+    <tr>
+      <th>District Name</th>
+      <th>Active</th>
+      <th>Confirmed</th>
+      <th>Deceased</th>
+      <th>Recovered</th>
+      <th>Delta Confirmed</th>
+      <th>Delta Deceased</th>
+      <th>Delta Recovered</th>
+      <th>Migrated Candidates</th>
+      <th>Notes</th>
+    </tr>
+    <tr *ngFor="let details of apCovid19Data">
+      <td style="color: rgb(0, 0, 0); font-weight: 800;">{{ details.name }}</td>
+      <td>{{details.value.active}} </td>
+      <td>{{details.value.confirmed}}</td>
+      <td>{{details.value.deceased}}</td>
+      <td>{{details.value.recovered}}</td>
+      <td>{{details.value.delta.confirmed}}</td>
+      <td>{{details.value.delta.deceased}}</td>
+      <td>{{details.value.delta.recovered}}</td>
+      <td>{{details.value.migratedother}}</td>
+      <td>{{details.value.notes}} </td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- <br><br>
+<table>
+  <tr>
+    <th>State Name</th>
+    <th>District Name</th>
+    <th>Active</th>
+    <th>Confirmed</th>
+    <th>Deceased</th>
+    <th>Recovered</th>
+  </tr>
+  <tr *ngFor= "let data of covidData">
+    <td>{{ data.name }}</td>
+    <td>{{details.value.active}} </td>
+    <td>{{details.value.confirmed}}</td>
+    <td>{{details.value.deceased}}</td>
+    <td>{{details.value.recovered}}</td>
+  </tr>
+</table> -->
