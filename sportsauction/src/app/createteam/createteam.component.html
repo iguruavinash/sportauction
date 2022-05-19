@@ -1,0 +1,14 @@
+<form [formGroup]="CreateProfileForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label>Team Name:</label>
+        <input type="text" formControlName="TeamName" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Team Max Budget:</label>
+        <input (keypress)="numberOnly($event)" type="text" placeholder="Only Numbers" formControlName="TeamMaxBudget" class="form-control">
+    </div>
+
+    <button type="submit" [disabled]="!CreateProfileForm.valid">Submit</button>
+</form>
